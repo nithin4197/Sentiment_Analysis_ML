@@ -23,7 +23,7 @@ This project implements sentiment analysis using a Support Vector Machine (SVM) 
 ## Requirements
 
 - Python 3.x
-- Libraries: scikit-learn, pandas, tkinter
+- Libraries: scikit-learn, pandas, tkinter, joblib
 
 ## Setup
 
@@ -47,19 +47,14 @@ This project implements sentiment analysis using a Support Vector Machine (SVM) 
 
 ## Usage
 
-1. Train the model:
+
+1. Run the GUI application:
 
     ```bash
-    python train_model.py
+    python gui.py
     ```
 
-2. Run the GUI application:
-
-    ```bash
-    python gui_app.py
-    ```
-
-3. Follow the on-screen instructions to enter text and view predictions.
+2. Follow the on-screen instructions to enter text and view predictions.
 
 ## Contributing
 
