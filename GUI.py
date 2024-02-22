@@ -24,7 +24,7 @@ def predict():
 
 def show_metrics():
     # replace with actual path of the test csv file given
-    test = pd.read_csv("C:\\Users\\HAI\\Desktop\\Sentiment_Analysis_ML\\dataset\\Kaggle sentiment analysis\\test.csv",
+    test = pd.read_csv("./test.csv",
                        encoding='latin1')
     test.dropna(subset=['text'], inplace=True)
     drop_col = ['textID', 'Time of Tweet', 'Population -2020', 'Land Area (Km²)', 'Density (P/Km²)', 'Country',
