@@ -6,8 +6,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
 
 # Load the pickled model
-model = joblib.load('svm_model.pkl')  # Replace with your actual model file path
-vectorizer = joblib.load('vectorizer.pkl')  # Replace with your actual vectorizer
+model = joblib.load('svm_model.pkl')  
+vectorizer = joblib.load('vectorizer.pkl') 
 
 def predict():
     input_text = entry.get()
@@ -20,10 +20,10 @@ def predict():
 
     # Make prediction
     prediction = model.predict(input_vectorized)
-    messagebox.showinfo("Prediction", f"The predicted class is: {prediction[0]}")
+    messagebox.showinfo("Prediction", f"The predicted sentiment of the feedback is: {prediction[0]}")
 
 def show_metrics():
-    # replace with actual path of the test csv file given
+    # Make sure the test.csv file is in the same folder as GUI.py
     test = pd.read_csv("./test.csv",
                        encoding='latin1')
     test.dropna(subset=['text'], inplace=True)
@@ -59,7 +59,7 @@ predict_button = tk.Button(root, text="Predict", command=predict, bg='#4CAF50', 
 predict_button.pack(pady=5)  # Center the button
 
 # Button for showing accuracy and classification report
-show_metrics_button = tk.Button(root, text="Show Metrics", command=show_metrics, bg='#008CBA', fg='white', relief=tk.GROOVE, height=2, width=15)
+show_metrics_button = tk.Button(root, text="Model Metrics", command=show_metrics, bg='#008CBA', fg='white', relief=tk.GROOVE, height=2, width=15)
 show_metrics_button.pack(pady=5)  # Center the button
 
 # Run the main loop
